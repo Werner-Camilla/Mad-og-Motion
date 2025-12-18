@@ -76,8 +76,8 @@
       <section class="section-hero">
         <div class="hero">
           <video class="hero-video" autoplay muted loop playsinline>
-            <source src="assets/video/Forsidevideo-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
-            <source src="assets/video/Forsidevideo.mp4" type="video/mp4">
+            <source src="assets/video/Forkortet Forsidevideo.mp4" type="video/mp4" media="(max-width: 768px)">
+            <source src="assets/video/Forkortet Forsidevideo.mp4" type="video/mp4">
             Din browser understøtter ikke video.
           </video>
           <div class="hero-text-box">
@@ -85,8 +85,7 @@
               Lev et godt og sundt liv trods kronisk sygdom
             </h1>
             <p class="hero-description">
-              Med den rette <strong>mad og motion</strong> er det muligt at lindre symptomerne på en lang række <strong>kroniske sygdomme</strong>. Med online fysioterapi og skræddersyede mad- og
-              træningsplaner kan jeg hjælpe dig på rette vej til en sund livsstil med
+              Med den rette <strong>mad og motion</strong> er det muligt at lindre symptomerne på en lang række <strong>kroniske sygdomme</strong>. Med online fysioterapi og kostvejledning kan jeg hjælpe dig på rette vej til en sund livsstil med
               <strong>færre symptomer</strong>.
             </p>
             <a href="#cta" class="btn btn--full margin-right-sm"
@@ -464,91 +463,240 @@
         </div>
 
         <div class="container grid grid--3-cols margin-bottom-md">
-          <div class="pricing-plan pricing-plan--starter">
-            <header class="plan-header">
-              <p class="plan-name">Fysioterapi online</p>
-              <p class="plan-price"><span>Kr.</span>1400</p>
-              <p class="plan-text">Smertereduktion og motivation til bevægelse</p>
-            </header>
-            <ul class="list">
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>1 konsultation af 40 min.</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>3 konsultationer af 25 min.</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>1 skræddersyet træningsplan</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Opfølgning via email</span>
-              </li>
-            </ul>
-            <div class="plan-sing-up">
-              <a href="#" class="btn btn--full">Book Forløb</a>
+          <!-- Card 1: Fysioterapi -->
+          <div class="pricing-card">
+            <div class="pricing-card-inner">
+              <div class="pricing-plan pricing-plan--starter pricing-plan--front">
+                <header class="plan-header">
+                  <p class="plan-name">Fysioterapi online</p>
+                  <p class="plan-price"><span>Kr.</span>1400</p>
+                  <div class="plan-toggle">
+                    <span class="plan-toggle-option plan-toggle-option--active">Kort forløb</span>
+                    <span class="plan-toggle-option plan-toggle-clickable">Langt forløb <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                  </div>
+                  <p class="plan-text">Motivation til bevægelse og strategier til symptomlindring</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 konsultation af 45 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>3 konsultationer af 30 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 skræddersyet træningsplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Adgang til træningsapp</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Opfølgning via email</span>
+                  </li>
+                </ul>
+                <!-- <div class="plan-sing-up">
+                  <a href="#" class="btn btn--full">Om Forløbet</a>
+                </div> -->
+              </div>
+              
+              <div class="pricing-plan pricing-plan--starter pricing-plan--back">
+                <header class="plan-header">
+                  <p class="plan-name">Fysioterapi online <span 
+                  <p class="plan-price"><span>Kr.</span>2600</p>
+                  <div class="plan-toggle">
+                    <span class="plan-toggle-option plan-toggle-clickable"><ion-icon name="arrow-back-outline"></ion-icon> Kort forløb</span>
+                    <span class="plan-toggle-option plan-toggle-option--active">Langt forløb</span>
+                  </div>
+                  <p class="plan-text">Motivation til bevægelse og strategier til symptomlindring</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 konsultation af 45 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>6 konsultationer af 30 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 skræddersyet træningsplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Adgang til træningsapp</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Opfølgning via email</span>
+                  </li>
+                </ul>
+                <!-- <div class="plan-sing-up">
+                  <a href="#" class="btn btn--full">Om Forløbet</a>
+                </div> -->
+              </div>
             </div>
           </div>
 
-          <div class="pricing-plan pricing-plan--starter">
-            <header class="plan-header">
-              <p class="plan-name">Kost online</p>
-              <p class="plan-price"><span>Kr.</span>1700</p>
-              <p class="plan-text">Antiinflammatorisk kost- og træningsvejledning</p>
-            </header>
-            <ul class="list">
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>1. konsultation af 40 min.</span>
-              </li>
-                <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>3 konsultationer af 25 min.</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>1 skræddersyet madplan                                   </span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Fleksibel fordeling af kost- og træningsfokus</span>
-              </li>
-             
-            </ul>
-            <div class="plan-sing-up">
-              <a href="#" class="btn btn--full">Book Forløb</a>
+          <!-- Card 2: Kost -->
+          <div class="pricing-card">
+            <div class="pricing-card-inner">
+              <div class="pricing-plan pricing-plan--starter pricing-plan--front">
+                <header class="plan-header">
+                  <p class="plan-name">Kostvejledning online</p>
+                  <p class="plan-price"><span>Kr.</span>1700</p>
+                  <div class="plan-toggle">
+                    <span class="plan-toggle-option plan-toggle-option--active">Kort forløb</span>
+                    <span class="plan-toggle-option plan-toggle-clickable">Langt forløb <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                  </div>
+                  <p class="plan-text">Kostvejledning med antiinflammatorisk fokus</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 konsultation af 45 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>3 konsultationer af 30 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 skræddersyet madplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Opfølgning via email</span>
+                  </li>
+                </ul>
+                <!-- <div class="plan-sing-up">
+                  <a href="#" class="btn btn--full">Om Forløbet</a>
+                </div> -->
+              </div>
+              
+              <div class="pricing-plan pricing-plan--starter pricing-plan--back">
+                <header class="plan-header">
+                  <p class="plan-name">Kostvejledning online</p>
+                  <p class="plan-price"><span>Kr.</span>3200</p>
+                  <div class="plan-toggle">
+                    <span class="plan-toggle-option plan-toggle-clickable"><ion-icon name="arrow-back-outline"></ion-icon> Kort forløb</span>
+                    <span class="plan-toggle-option plan-toggle-option--active">Langt forløb</span>
+                  </div>
+                  <p class="plan-text">Kostvejledning med antiinflammatorisk fokus</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 konsultation af 45 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>6 konsultationer af 30 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 skræddersyet madplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Opfølgning via email</span>
+                  </li>
+                </ul>
+                <!-- <div class="plan-sing-up">
+                  <a href="#" class="btn btn--full">Om Forløbet</a>
+                </div> -->
+              </div>
             </div>
           </div>
 
-          <div class="pricing-plan pricing-plan--complete">
-              <header class="plan-header">
-              <p class="plan-name">Hybrid</p>
-              <p class="plan-price"><span>Kr.</span>1400</p>
-              <p class="plan-text">Smertereduktion og motivation til bevægelse</p>
-            </header>
-            <ul class="list">
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>1 konsultation af 40 min.</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>3 konsultationer af 25 min.</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>1 skræddersyet træningsplan</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Opfølgning via email</span>
-              </li>
-            </ul>
-            <div class="plan-sing-up">
-              <a href="#" class="btn btn--full">Book Forløb</a>
+          <!-- Card 3: Kost og træning -->
+          <div class="pricing-card">
+            <div class="pricing-card-inner">
+              <div class="pricing-plan pricing-plan--complete pricing-plan--front">
+                <header class="plan-header">
+                  <p class="plan-name">Kost- og træning online</p>
+                  <p class="plan-price"><span>Kr.</span>2800</p>
+                  <div class="plan-toggle">
+                    <span class="plan-toggle-option plan-toggle-option--active">Kort forløb</span>
+                    <span class="plan-toggle-option plan-toggle-clickable">Langt forløb <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                  </div>
+                  <p class="plan-text">Antiinflammatorisk kost- og træningsvejledning</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 konsultation af 45 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>5 konsultationer af 30 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 personlig træningsplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 skræddersyet madplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Adgang til træningsapp</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Opfølgning via email</span>
+                  </li>
+                </ul>
+                <!-- <div class="plan-sing-up">
+                  <a href="#" class="btn btn--full">Om Forløbet</a>
+                </div> -->
+              </div>
+              
+              <div class="pricing-plan pricing-plan--complete pricing-plan--back">
+                <header class="plan-header">
+                  <p class="plan-name">Kost- og træning online</p>
+                  <p class="plan-price"><span>Kr.</span>5200</p>
+                  <div class="plan-toggle">
+                    <span class="plan-toggle-option plan-toggle-clickable"><ion-icon name="arrow-back-outline"></ion-icon> Kort forløb</span>
+                    <span class="plan-toggle-option plan-toggle-option--active">Langt forløb</span>
+                  </div>
+                  <p class="plan-text">Antiinflammatorisk kost- og træningsvejledning</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 konsultation af 45 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>10 konsultationer af 30 min.</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 personlig træningsplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>1 skræddersyet madplan</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Adgang til træningsapp</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                    <span>Opfølgning via email</span>
+                  </li>
+                </ul>
+                <!-- <div class="plan-sing-up">
+                  <a href="#" class="btn btn--full">Om Forløbet</a>
+                </div> -->
+              </div>
             </div>
           </div>
         </div>

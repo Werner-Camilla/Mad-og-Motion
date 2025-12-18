@@ -119,6 +119,22 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
+///////////////////////////////////////////////////////////
+// Pricing card flip functionality
+
+const pricingCards = document.querySelectorAll(".pricing-card");
+
+pricingCards.forEach((card) => {
+  const toggleButtons = card.querySelectorAll(".plan-toggle-clickable");
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      card.classList.toggle("flipped");
+    });
+  });
+});
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 ///////////////////////////////////////////////////////////
