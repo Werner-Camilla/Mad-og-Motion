@@ -157,7 +157,7 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: var(--button-color);
+  color: #ff5601;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
@@ -169,82 +169,110 @@ body {
   display: inline-block;
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 1.6rem 3.2rem;
-  border-radius: 10px;
-  border: none;
+  border: 2px solid #b3d7c5;
+  outline: none;
+  color: #00793d;
+  background: var(--sand);
   cursor: pointer;
   font-family: inherit;
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-    to right,
-    #b33c01,
-    #ff894d,
-    #b33c01,
-    #b33c01,
-    #ff894d,
-    #b33c01
-  );
-  background-size: 250%;
-  background-position: left;
-  color: #ffffff;
-  transition-duration: 1s;
-  z-index: 1;
+  z-index: 0;
+  border-radius: 10px;
+  transition: color 0.8s ease-in-out;
 }
 
 .btn::before,
 .btn:link::before,
 .btn:visited::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #003d1f,
+    #00793d,
+    #339464,
+    #66af8b,
+    #ff894d,
+    #ff5601,
+    #cc4501,
+    #003d1f
+  );
   position: absolute;
-  content: attr(data-text);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 97%;
-  height: 90%;
-  border-radius: 8px;
-  transition-duration: 1s;
-  background-color: rgba(255, 86, 1, 1);
-  background-size: 200%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
   z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn:active,
+.btn:active:link,
+.btn:active:visited {
+  color: #000;
+}
+
+.btn:active::after,
+.btn:active:link::after,
+.btn:active:visited::after {
+  background: transparent;
+}
+
+.btn:hover::before,
+.btn:hover:link::before,
+.btn:hover:visited::before {
+  opacity: 1;
+}
+
+.btn:hover,
+.btn:hover:link,
+.btn:hover:visited {
+  color: #ff5601;
+}
+
+.btn::after,
+.btn:link::after,
+.btn:visited::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--sand);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .btn--full:link,
 .btn--full:visited {
-  background: linear-gradient(
-    to right,
-    #b33c01,
-    #ff894d,
-    #b33c01,
-    #b33c01,
-    #ff894d,
-    #b33c01
-  );
-  background-size: 250%;
-  background-position: left;
-  color: #ffffff;
+  color: #00793d;
+  background: var(--sand);
+  border: 2px solid #b3d7c5;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-position: right;
-  transition-duration: 1s;
-  background-color: rgba(255, 255, 255, 0.35);
-}
-
-.btn:hover::before,
-.btn:active::before {
-  background-position: right;
-  transition-duration: 1s;
-}
-
-.btn:active {
-  transform: scale(0.95);
+  color: #00793d;
 }
 
 .btn--outline:link,
@@ -265,21 +293,21 @@ body {
 }
 
 .btn--form {
-  background-color: var(--button-color);
-  color: #fffefa;
+  background-color: var(--sand);
+  color: #00793d;
   align-self: end;
   padding: 1.2rem;
+  border: 2px solid #b3d7c5;
 }
 
 .btn--form:hover {
-  background-color: #fff;
-  color: #bb0b0bff;
+  color: #00793d;
 }
 
 .link:link,
 .link:visited {
   display: inline-block;
-  color: #ff5601;
+  color: #00793d;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -288,7 +316,7 @@ body {
 
 .link:hover,
 .link:active {
-  color: #ff5601;
+  color: #00793d;
 }
 
 .list {
@@ -403,7 +431,7 @@ strong {
 .main-nav-list .dropdown a:hover,
 .main-nav-list .dropdown a:focus {
   background: #fdf2e9;
-  color: #ff5601;
+  color: #00793d;
 }
 
 /* Show dropdown on hover and keyboard focus */
@@ -442,7 +470,7 @@ strong {
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #ff5601;
+  color: #00793d;
   text-decoration: underline;
 }
 
@@ -454,55 +482,72 @@ strong {
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
   padding: 1.6rem 2.4rem;
-  border-radius: 10px;
-  color: #ffffff;
+  color: #00793d;
   font-weight: 700;
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-    to right,
-    #cc4501,
-    #ff894d,
-    #cc4501,
-    #cc4501,
-    #ff894d,
-    #cc4501
-  );
-  background-size: 250%;
-  background-position: left;
-  transition-duration: 1s;
-  z-index: 1;
+  background: var(--sand);
+  border: 2px solid #b3d7c5;
+  outline: none;
+  cursor: pointer;
+  z-index: 0;
+  border-radius: 10px;
+  transition: color 0.8s ease-in-out;
 }
 
 .main-nav-link.nav-cta::before {
-  position: absolute;
   content: "";
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 97%;
-  height: 90%;
-  border-radius: 8px;
-  transition-duration: 1s;
-  background-color: rgba(255, 86, 1, 1);
-  background-size: 200%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    45deg,
+    #003d1f,
+    #00793d,
+    #339464,
+    #66af8b,
+    #ff894d,
+    #ff5601,
+    #cc4501,
+    #003d1f
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
   z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
-.main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
-  background-position: right;
-  transition-duration: 1s;
+  color: #000;
 }
 
-.main-nav-link.nav-cta:hover::before,
-.main-nav-link.nav-cta:active::before {
-  background-position: right;
-  transition-duration: 1s;
+.main-nav-link.nav-cta:active::after {
+  background: transparent;
+}
+
+.main-nav-link.nav-cta:hover::before {
+  opacity: 1;
+}
+
+.main-nav-link.nav-cta:hover {
+  color: #ff5601;
+}
+
+.main-nav-link.nav-cta::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--sand);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
 }
 
 /* MOBILE */
@@ -870,12 +915,6 @@ strong {
 .pricing-card {
   perspective: 1000px;
   height: 64rem;
-  transition: all 0.4s;
-}
-
-.pricing-card:hover {
-  transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .pricing-card-inner {
@@ -912,7 +951,7 @@ strong {
   align-items: center;
   padding: 1.2rem 0 2rem 0;
   margin-top: 1.2rem;
-  border-top: 1px solid rgba(255, 86, 1, 0.2);
+  border-top: 1px solid #ff894d;
   font-size: 1.4rem;
   gap: 1.6rem;
 }
@@ -924,7 +963,7 @@ strong {
 }
 
 .plan-toggle-option--active {
-  color: #ff5601;
+  color: #ff894d;
   font-weight: 600;
 }
 
@@ -935,7 +974,7 @@ strong {
 }
 
 .plan-toggle-clickable:hover {
-  color: #ff5601;
+  color: #434343;
   transform: translateX(3px);
 }
 
@@ -945,7 +984,7 @@ strong {
 
 .plan-extended {
   font-size: 1.4rem;
-  color: #ff5601;
+  color: #00793d;
   font-weight: 700;
 }
 
@@ -961,9 +1000,13 @@ strong {
   margin-bottom: 0;
 }
 
+.pricing-plan .list-icon {
+  color: #ff894d;
+}
+
 .pricing-plan--starter {
   justify-self: end;
-  border: 2px solid #fdf2e9;
+  border: 2px solid #ffdcca;
   padding: 8rem 3.2rem 0 3.2rem;
 }
 
@@ -975,8 +1018,8 @@ strong {
 .pricing-plan--complete.pricing-plan--front::after {
   content: "Anbefalet";
   position: absolute;
-  top: 6%;
-  right: -18%;
+  top: 4.5%;
+  right: -22%;
 
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -986,13 +1029,14 @@ strong {
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
   overflow: hidden;
+  text-align: center;
 }
 
 .pricing-plan--complete.pricing-plan--back::after {
-  content: "Bedst effekt";
+  content: "Anbefalet";
   position: absolute;
-  top: 6%;
-  right: -18%;
+  top: 4.5%;
+  right: -22%;
 
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -1002,11 +1046,13 @@ strong {
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
   overflow: hidden;
+  text-align: center;
 }
 
 .plan-header {
   text-align: center;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .plan-name {
@@ -1016,6 +1062,7 @@ strong {
   text-transform: uppercase;
   letter-spacing: 0.75;
   margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .plan-price {
@@ -1023,24 +1070,31 @@ strong {
   font-weight: 600;
   color: #333;
   margin-bottom: 1.6rem;
+  text-align: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 
 .plan-price span {
   font-size: 3rem;
   font-weight: 500;
   margin-right: 0.8rem;
+  margin-left: -2rem;
 }
 
 .plan-text {
   font-size: 1.6rem;
   line-height: 1.6;
   color: #6f6f6f;
+  text-align: center;
 }
 
 .plan-sing-up {
   text-align: center;
   margin-top: auto;
   padding-top: 0.8rem;
+  padding-bottom: 3.2rem;
 }
 
 .plan-details {
@@ -1091,7 +1145,7 @@ strong {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
 
-  background-image: linear-gradient(to right bottom, #f85f13, #cc4501);
+  background-image: linear-gradient(to right bottom, #00793d, #003d1f);
   overflow: hidden;
 }
 
@@ -1352,4 +1406,64 @@ strong {
 
 .carousel-dot:hover {
   transform: scale(1.2);
+}
+
+/* ~~~~~~~ FROM RIGHT BUTTON ANIMATION ~~~~~~~ */
+
+.link.from-right {
+  position: relative;
+  padding: 1.2rem 2.4rem;
+  padding-bottom: 1.2rem !important;
+  border-bottom: none !important;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.link.from-right:before,
+.link.from-right:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.link.from-right:hover {
+  color: var(--sand);
+  border-bottom: none;
+  transition-delay: 0.5s;
+}
+
+.link.from-right:hover:before {
+  transition-delay: 0s;
+}
+
+.link.from-right:hover:after {
+  background: #00793d;
+  transition-delay: 0.35s;
+}
+
+/* From Right Effect */
+
+.link.from-right:before,
+.link.from-right:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.link.from-right:before {
+  left: 0;
+  border: 2px solid #00793d;
+  border-left: 0;
+  border-right: 0;
+}
+
+.link.from-right:after {
+  right: 0;
+}
+
+.link.from-right:hover:before,
+.link.from-right:hover:after {
+  width: 100%;
 }
